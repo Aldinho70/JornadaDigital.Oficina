@@ -1,0 +1,63 @@
+  /* Personalizar el fondo del calendario */
+  .fc {
+    background-color: #f0f0f0;
+  }
+
+  /* Personalizar el fondo de los días */
+  /* .fc-daygrid-day {
+      background-color: #d3d3d3; 
+  } */
+  .fc-daygrid-day-number {
+    color: black;
+    /* Color del número del día */
+  }
+
+  /* Personalizar el fondo de los encabezados */
+  .fc-col-header-cell {
+    background-color: orange;
+    /* Fondo gris oscuro para los encabezados */
+    color: orange;
+    /* Texto blanco para los encabezados */
+  }
+
+  /* Cambiar el color de los nombres de los días */
+  .fc-col-header-cell-cushion {
+    color: #000000;
+    /* Color de los nombres de los días */
+  }
+
+  /* Personalizar el fondo de los eventos */
+  .fc-event {
+    background-color: #a0a0a0;
+    /* Fondo gris para los eventos */
+    border-color: #808080;
+    /* Borde gris más oscuro para los eventos */
+    color: #fff;
+    color: #ffe403;
+    color: #eb9d0b;
+    /* Texto blanco para los eventos */
+  }
+
+  .ql-editor img {
+    max-width: 300px;
+    height: auto;
+  }
+
+  /* Cambiar el color de la letra dentro de los eventos */
+  .fc-event-time {
+    color: black;
+    
+    /* Cambia este color al que prefieras */
+  }
+
+  .fc-event-title {
+    color: white;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-size: 20px;
+    font-weight: bold; /* Hace la letra más gruesa */;
+    /* Cambia este color al que prefieras */
+  }
+
+  #text {
+    height: 300px;
+  }

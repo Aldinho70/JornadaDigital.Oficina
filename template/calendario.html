@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Jornada digital el monitoreo inteligente" />
+  <meta name="author" content="Jesus Manuel Bobadilla Villagrana" />
+  <meta name="generator" content="Hugo 0.122.0" />
+  <title>Pendientes Jornada Digital</title>
+
+  <!-- CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/dashboard/" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+  <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
+
+  <!-- CSS Estaticos -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../css/dashboard.css" rel="stylesheet" />
+  <link href="../css/style.css" rel="stylesheet" />
+  <link href="../css/fullcalendar.css" rel="stylesheet" />
+</head>
+
+<style>
+  /* @media (max-width: 768px) {
+  #calendar {
+    width: 100%;
+    height: auto !important;
+  }
+
+  .fc-toolbar {
+    flex-direction: column;
+  }
+
+  .fc-header-toolbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+} */
+
+</style>
+
+<body class=" ">
+  <!-- Menu responsivo -->
+  <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+      aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+      <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+        <use href="#circle-half"></use>
+      </svg>
+      <span class="visually-hidden" id="bd-theme-text">Tema</span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+          aria-pressed="false">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em">
+            <use href="#sun-fill"></use>
+          </svg>
+          Claro
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="#check2"></use>
+          </svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+          aria-pressed="false">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em">
+            <use href="#moon-stars-fill"></use>
+          </svg>
+          Oscuro
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="#check2"></use>
+          </svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
+          aria-pressed="true">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em">
+            <use href="#circle-half"></use>
+          </svg>
+          Auto
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="#check2"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+  <!--///////////////////////////////////////////////////  -->
+
+  <!-- Header -->
+  <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark">
+    <a class="navbar-brand" href="#">
+      <img src="../img/logojd.png" width="30" height="24" alt="" />
+      Jornada Digital
+    </a>
+
+    <ul class="navbar-nav flex-row d-md-none">
+      <li class="nav-item text-nowrap">
+        <button class="nav-link px-3 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch"
+          aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle search">
+          <svg class="bi">
+            <use xlink:href="#search" />
+          </svg>
+        </button>
+      </li>
+      <li class="nav-item text-nowrap">
+        <button class="nav-link px-3 text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu"
+          aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <svg class="bi">
+            <use xlink:href="#list" />
+          </svg>
+        </button>
+      </li>
+    </ul>
+
+    <div id="navbarSearch" class="navbar-search w-100 collapse">
+      <input class="form-control w-100 rounded-0 border-0" type="text" placeholder="Search" aria-label="Search" />
+    </div>
+  </header>
+  <!-- ////////////////////////////////////////////////// -->
+
+  <!-- Conenido -->
+  <div class="container-fluid text-dark">
+    <div class="row">
+      <!-- Menu lateral -->
+      <div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary text-dark">
+        <div class="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu"
+          aria-labelledby="sidebarMenuLabel">
+          <div class="offcanvas-header">
+            <a class="navbar-brand" href="#">
+              <img src="../img/logojd.png" width="30" height="24" alt="" />
+              Jornada Digital
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body d-md-flex flex-column gap-3 p-3 overflow-y-auto">
+
+            <!-- Porcentaje -->
+            <div class="card text-center shadow-lg border-0 rounded-4">
+              <div class="card-body">
+                <h5 class="card-title text-muted fw-semibold">Pendientes terminados</h5>
+                <h1 class="display-3 text-success fw-bold" id="cont-porcent">0%</h1>
+                <p class="card-text text-secondary">del total asignadas</p>
+              </div>
+            </div>
+          
+            <!-- Conteo de actividades -->
+            <div class="card shadow-lg border-0 rounded-4">
+              <div class="card-header text-center fw-bold bg-primary text-white">
+                Conteo de estados de los eventos
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between align-items-center py-3"
+                  onclick="view_status_events_modal('sin_terminar');">
+                  <div class="d-flex align-items-center">
+                    <span class="badge bg-danger rounded-circle p-2 me-2"></span>
+                    <span class="fw-semibold">Sin terminar</span>
+                  </div>
+                  <span class="badge rounded-pill text-bg-danger px-3 py-2" id="cont-Sin_terminar">0</span>
+                </li>
+          
+                <li class="list-group-item d-flex justify-content-between align-items-center py-3"
+                  onclick="view_status_events_modal('en_progreso');">
+                  <div class="d-flex align-items-center">
+                    <span class="badge bg-warning rounded-circle p-2 me-2"></span>
+                    <span class="fw-semibold">En progreso</span>
+                  </div>
+                  <span class="badge rounded-pill text-bg-warning px-3 py-2" id="cont-En_progreso">0</span>
+                </li>
+          
+                <li class="list-group-item d-flex justify-content-between align-items-center py-3"
+                  onclick="view_status_events_modal('terminados');">
+                  <div class="d-flex align-items-center">
+                    <span class="badge bg-success rounded-circle p-2 me-2"></span>
+                    <span class="fw-semibold">Terminado</span>
+                  </div>
+                  <span class="badge rounded-pill text-bg-success px-3 py-2" id="cont-Terminado">0</span>
+                </li>
+              </ul>
+            </div>
+          
+          </div>
+          
+        </div>
+      </div>
+      <!-- //////////////////////////////////////////// -->
+
+      <!-- Main principal -->
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-light">
+        <!--  Titulos de contenedor de la pagina -->
+        <div
+          class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom text-dark">
+          <h1 class="h2">Calendario de actividades.</h1>
+        </div>
+        <!-- ///////////////////////////////////////// -->
+        <div class="row">
+          <!-- Conteo de las actvidades -->
+          <!-- <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+              <div class="card-header  text-center fw-bold">
+                Conteo de estados de los eventos
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between align-items-center"
+                  onclick="view_status_events_modal('sin_terminar');">
+                  <div>
+                    <svg class="bd-placeholder-img rounded me-2" width="20" height="20"
+                      xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
+                      focusable="false">
+                      <rect width="100%" height="100%" fill="#e74c3c"></rect>
+                    </svg>
+                    <span class="fw-semibold">Sin terminar</span>
+                  </div>
+                  <span class="badge rounded-pill text-bg-danger" id="cont-Sin_terminar">0</span>
+                </li>
+
+                <li class="list-group-item d-flex justify-content-between align-items-center"
+                  onclick="view_status_events_modal('en_progreso');">
+                  <div>
+                    <svg class="bd-placeholder-img rounded me-2" width="20" height="20"
+                      xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
+                      focusable="false">
+                      <rect width="100%" height="100%" fill="#f5b041"></rect>
+                    </svg>
+                    <span class="fw-semibold">En progreso</span>
+                  </div>
+                  <span class="badge rounded-pill text-bg-warning" id="cont-En_progreso">0</span>
+                </li>
+
+                <li class="list-group-item d-flex justify-content-between align-items-center"
+                  onclick="view_status_events_modal('terminados');">
+                  <div>
+                    <svg class="bd-placeholder-img rounded me-2" width="20" height="20"
+                      xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
+                      focusable="false">
+                      <rect width="100%" height="100%" fill="#2ecc71"></rect>
+                    </svg>
+                    <span class="fw-semibold">Terminado</span>
+                  </div>
+                  <span class="badge rounded-pill text-bg-success" id="cont-Terminado">0</span>
+                </li>
+              </ul>
+            </div>
+          </div> -->
+
+          <!-- Pendientes terminados -->
+          <div class="col-md-4">
+            <!-- <div class="card text-center shadow-sm border-0 h-100">
+              <div class="card-body">
+                <h5 class="card-title text-muted">Pendientes terminados</h5>
+                <h1 class="display-1 text-success" id="cont-porcent">0%</h1>
+                <p class="card-text text-secondary">del total asignadas</p>
+              </div>
+            </div> -->
+          </div>
+
+          <!-- Calendario -->
+          <div class="text-dark w-100 h-100" id="calendar"></div>
+        </div>
+      </main>
+      <!-- //////////////////////////////////////////// -->
+    </div>
+  </div>
+
+  <!-- Modal view old evento -->
+  <div class="modal" id="modal-view" tabindex="-1">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal-title-view">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modal-body-view"></div>
+        <div class="modal-footer" id="modal-footer-view"></div>
+      </div>
+    </div>
+  </div>
+  <!-- //////////////////////////////////////////////// -->
+
+  <!-- Modal add new evento -->
+  <div class="modal" id="modal-add" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="tituloEvento">
+            Agregar nuevo pendiente
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="descripcionEvento"></div>
+          <form onsubmit="event.preventDefault();" class="container mt-4" id="form-add-event">
+            <div class="row g-2">
+              <div class="col-md">
+                <div class="form-floating">
+                  <div class="mb-3">
+                    <label for="start" class="form-label">Fecha de inicio:</label>
+                    <input type="date" id="start" name="start" class="form-control start-end" disabled />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="form-floating">
+                  <div class="mb-3">
+                    <label for="end" class="form-label">Fecha de terminacion:</label>
+                    <input type="date" id="end" name="end" class="form-control start-end" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="mb-3">
+              <label for="title-description" class="form-label">Titulo del evento</label>
+              <input type="text" class="form-control modal-add" id="title-description" />
+              <div id="title-description" class="form-text">
+                Poner un titulo corto pero descriptivo
+              </div>
+            </div>
+            <hr />
+            <div class="mb-3">
+              <label for="unidad" class="form-label">Unidad</label>
+              <input type="text" class="form-control modal-add" id="unidad" />
+              <div id="unidad" class="form-text">
+                Unidad o cliente
+              </div>
+            </div>
+            <hr />
+            <div class="mb-3">
+              <label for="user" class="form-label">Nombre:</label>
+              <select name="user" id="user" class="form-select">
+                <option value="Alejandra">Alejandra</option>
+                <option value="Guillermo">Guillermo</option>
+                <option value="Jesus">Jesus</option>
+                <option value="Juan de Dios">Juan de Dios</option>
+                <option value="Silvia">Silvia</option>
+              </select>
+            </div>
+            <hr />
+            <div class="mb-3 d-none">
+              <label for="text" class="form-label modal-add">Descripci¨®n:</label>
+              <textarea id="text-parsed-quill" name="text" class="form-control modal-add" rows="5"
+                style="white-space: pre-wrap"></textarea>
+            </div>
+            <div id="container-text">
+              <div id="text"></div>
+            </div>
+            <input class="d-none" id="info" type="text" />
+            <hr />
+            <div class="mb-3">
+              <label for="txtColor" class="form-label">Tipo de evento:</label>
+              <select name="color" id="type" class="form-select">
+                <option value="Cobranza a clientes">
+                  Cobranza a clientes
+                </option>
+                <option value="Atenci¨®n a clientes">
+                  Atenci¨®n a clientes
+                </option>
+                <option value="Instalacion o servicio a clientes">
+                  Instalacion o servicio a clientes
+                </option>
+                <option value="Reporte de actividades">
+                  Reporte de actividades
+                </option>
+              </select>
+            </div>
+            <hr />
+            <div class="mb-3">
+              <label for="txtColor" class="form-label">Estatus del evento</label>
+              <select name="color" id="estatus" class="form-select">
+                <option value="red">En progreso</option>
+                <option value="#44eb0b">Finalizada</option>
+              </select>
+            </div>
+
+            <button id="btnadd" class="btn btn-success" onclick="newEvent();">
+              Agregar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //////////////////////////////////////////////// -->
+
+  <!-- Modal para events status -->
+  <div class="modal" tabindex="-1" id="modal-events-status">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Estados de los eventos</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="container d-flex mb-3">
+          <button class="btn btn-outline-info me-2" onclick="filterByUser('Alejandra')">
+            Alejandra
+          </button>
+          <button class="btn btn-outline-info me-2" onclick="filterByUser('Guillermo')">
+            Guillermo
+          </button>
+          <button class="btn btn-outline-info me-2" onclick="filterByUser('Juan de Dios')">
+            Juan de Dios
+          </button>
+          <button class="btn btn-outline-info" onclick="filterByUser('all')">
+            Ver todos
+          </button>
+        </div>
+        <div class="modal-body" id="modal-body-events-status"></div>
+        <div class="modal-footer"></div>
+      </div>
+    </div>
+  </div>
+  <!-- ------------------------ -->
+
+  <!-- JS CDN -->
+  <!-- Jquery complete -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+  <!-- Quill.js  -->
+  <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+
+  <!-- Fullcalendar.js -->
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.14/index.global.min.js"></script>
+  <script src="https://unpkg.com/fullcalendar@5.11.3/locales/es.js"></script>
+
+  <!-- moment.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+  <!-- Axios -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <!-- JS Estaticos -->
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/events/fullcalendar.js"></script>
+  <!-- <script src="../js/events/quill.js"></script> -->
+</body>
+
+</html>

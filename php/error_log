@@ -1,0 +1,429 @@
+[19-Oct-2024 18:39:28 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[19-Oct-2024 18:39:28 UTC] PHP Stack trace:
+[19-Oct-2024 18:39:28 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[19-Oct-2024 18:39:28 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[19-Oct-2024 18:39:28 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[19-Oct-2024 18:39:28 UTC] PHP Stack trace:
+[19-Oct-2024 18:39:28 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[19-Oct-2024 18:39:28 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[19-Oct-2024 18:39:28 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[19-Oct-2024 18:39:28 UTC] PHP Stack trace:
+[19-Oct-2024 18:39:28 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[19-Oct-2024 18:39:28 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[22-Oct-2024 16:49:44 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[22-Oct-2024 16:49:44 UTC] PHP Stack trace:
+[22-Oct-2024 16:49:44 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[22-Oct-2024 16:49:44 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[22-Oct-2024 16:49:44 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[22-Oct-2024 16:49:44 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[22-Oct-2024 16:49:44 UTC] PHP Stack trace:
+[22-Oct-2024 16:49:44 UTC] PHP Stack trace:
+[22-Oct-2024 16:49:44 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[22-Oct-2024 16:49:44 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[22-Oct-2024 16:49:44 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[22-Oct-2024 16:49:44 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[22-Oct-2024 16:49:49 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[22-Oct-2024 16:49:49 UTC] PHP Stack trace:
+[22-Oct-2024 16:49:49 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[22-Oct-2024 16:49:49 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[22-Oct-2024 16:49:49 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[22-Oct-2024 16:49:49 UTC] PHP Stack trace:
+[22-Oct-2024 16:49:49 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[22-Oct-2024 16:49:49 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[22-Oct-2024 16:49:49 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[22-Oct-2024 16:49:49 UTC] PHP Stack trace:
+[22-Oct-2024 16:49:49 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[22-Oct-2024 16:49:49 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[22-Oct-2024 16:53:10 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[22-Oct-2024 16:53:10 UTC] PHP Stack trace:
+[22-Oct-2024 16:53:10 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[22-Oct-2024 16:53:10 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[22-Oct-2024 16:53:10 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[22-Oct-2024 16:53:10 UTC] PHP Stack trace:
+[22-Oct-2024 16:53:10 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[22-Oct-2024 16:53:10 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[22-Oct-2024 16:53:10 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[22-Oct-2024 16:53:10 UTC] PHP Stack trace:
+[22-Oct-2024 16:53:10 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[22-Oct-2024 16:53:10 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[22-Oct-2024 16:57:45 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[22-Oct-2024 16:57:45 UTC] PHP Stack trace:
+[22-Oct-2024 16:57:45 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[22-Oct-2024 16:57:45 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[22-Oct-2024 16:57:45 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[22-Oct-2024 16:57:45 UTC] PHP Stack trace:
+[22-Oct-2024 16:57:45 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[22-Oct-2024 16:57:45 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[22-Oct-2024 16:57:45 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[22-Oct-2024 16:57:45 UTC] PHP Stack trace:
+[22-Oct-2024 16:57:45 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[22-Oct-2024 16:57:45 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[22-Oct-2024 18:30:04 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[22-Oct-2024 18:30:04 UTC] PHP Stack trace:
+[22-Oct-2024 18:30:04 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[22-Oct-2024 18:30:04 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[22-Oct-2024 18:30:04 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[22-Oct-2024 18:30:04 UTC] PHP Stack trace:
+[22-Oct-2024 18:30:04 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[22-Oct-2024 18:30:04 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[22-Oct-2024 18:30:04 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[22-Oct-2024 18:30:04 UTC] PHP Stack trace:
+[22-Oct-2024 18:30:04 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[22-Oct-2024 18:30:04 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[22-Oct-2024 23:09:04 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[22-Oct-2024 23:09:04 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[22-Oct-2024 23:09:04 UTC] PHP Stack trace:
+[22-Oct-2024 23:09:04 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[22-Oct-2024 23:09:04 UTC] PHP Stack trace:
+[22-Oct-2024 23:09:04 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[22-Oct-2024 23:09:04 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[22-Oct-2024 23:09:04 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[22-Oct-2024 23:09:04 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[22-Oct-2024 23:09:04 UTC] PHP Stack trace:
+[22-Oct-2024 23:09:04 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[22-Oct-2024 23:09:04 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[23-Oct-2024 15:14:53 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[23-Oct-2024 15:14:53 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[23-Oct-2024 15:14:53 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[23-Oct-2024 15:14:53 UTC] PHP Stack trace:
+[23-Oct-2024 15:14:53 UTC] PHP Stack trace:
+[23-Oct-2024 15:14:53 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[23-Oct-2024 15:14:53 UTC] PHP Stack trace:
+[23-Oct-2024 15:14:53 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[23-Oct-2024 15:14:53 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[23-Oct-2024 15:14:53 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[23-Oct-2024 15:14:53 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[23-Oct-2024 15:14:53 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[23-Oct-2024 15:14:53 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[23-Oct-2024 15:14:53 UTC] PHP Stack trace:
+[23-Oct-2024 15:14:53 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[23-Oct-2024 15:14:53 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[23-Oct-2024 15:14:53 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[23-Oct-2024 15:14:53 UTC] PHP Stack trace:
+[23-Oct-2024 15:14:53 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[23-Oct-2024 15:14:53 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[23-Oct-2024 15:14:53 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[23-Oct-2024 15:14:53 UTC] PHP Stack trace:
+[23-Oct-2024 15:14:53 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[23-Oct-2024 15:14:53 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[23-Oct-2024 15:14:56 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[23-Oct-2024 15:14:56 UTC] PHP Stack trace:
+[23-Oct-2024 15:14:56 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[23-Oct-2024 15:14:56 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[23-Oct-2024 15:14:56 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[23-Oct-2024 15:14:56 UTC] PHP Stack trace:
+[23-Oct-2024 15:14:56 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[23-Oct-2024 15:14:56 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[23-Oct-2024 15:14:56 UTC] PHP Stack trace:
+[23-Oct-2024 15:14:56 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[23-Oct-2024 15:14:56 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[23-Oct-2024 15:14:56 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[23-Oct-2024 15:16:22 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[23-Oct-2024 15:16:22 UTC] PHP Stack trace:
+[23-Oct-2024 15:16:22 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[23-Oct-2024 15:16:22 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[23-Oct-2024 15:16:22 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[23-Oct-2024 15:16:22 UTC] PHP Stack trace:
+[23-Oct-2024 15:16:22 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[23-Oct-2024 15:16:22 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[23-Oct-2024 15:16:22 UTC] PHP Stack trace:
+[23-Oct-2024 15:16:22 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[23-Oct-2024 15:16:22 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[23-Oct-2024 15:16:22 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[23-Oct-2024 17:58:32 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[23-Oct-2024 17:58:32 UTC] PHP Stack trace:
+[23-Oct-2024 17:58:32 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[23-Oct-2024 17:58:32 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[23-Oct-2024 17:58:32 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[23-Oct-2024 17:58:32 UTC] PHP Stack trace:
+[23-Oct-2024 17:58:32 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[23-Oct-2024 17:58:32 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[23-Oct-2024 17:58:32 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[23-Oct-2024 17:58:32 UTC] PHP Stack trace:
+[23-Oct-2024 17:58:32 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[23-Oct-2024 17:58:32 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[23-Oct-2024 17:59:45 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[23-Oct-2024 17:59:45 UTC] PHP Stack trace:
+[23-Oct-2024 17:59:45 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[23-Oct-2024 17:59:45 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[23-Oct-2024 17:59:45 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[23-Oct-2024 17:59:45 UTC] PHP Stack trace:
+[23-Oct-2024 17:59:45 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[23-Oct-2024 17:59:45 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[23-Oct-2024 17:59:45 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[23-Oct-2024 17:59:45 UTC] PHP Stack trace:
+[23-Oct-2024 17:59:45 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[23-Oct-2024 17:59:45 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[23-Oct-2024 18:01:06 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[23-Oct-2024 18:01:06 UTC] PHP Stack trace:
+[23-Oct-2024 18:01:06 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[23-Oct-2024 18:01:06 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[23-Oct-2024 18:01:06 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[23-Oct-2024 18:01:06 UTC] PHP Stack trace:
+[23-Oct-2024 18:01:06 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[23-Oct-2024 18:01:06 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[23-Oct-2024 18:01:06 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[23-Oct-2024 18:01:06 UTC] PHP Stack trace:
+[23-Oct-2024 18:01:06 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[23-Oct-2024 18:01:06 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[23-Oct-2024 18:03:18 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[23-Oct-2024 18:03:18 UTC] PHP Stack trace:
+[23-Oct-2024 18:03:18 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[23-Oct-2024 18:03:18 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[23-Oct-2024 18:03:18 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[23-Oct-2024 18:03:18 UTC] PHP Stack trace:
+[23-Oct-2024 18:03:18 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[23-Oct-2024 18:03:18 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[23-Oct-2024 18:03:18 UTC] PHP Warning:  Undefined array key "SQL" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php on line 11
+[23-Oct-2024 18:03:18 UTC] PHP Stack trace:
+[23-Oct-2024 18:03:18 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php:0
+[23-Oct-2024 18:03:18 UTC] PHP Fatal error:  Uncaught ValueError: mysqli::query(): Argument #1 ($query) cannot be empty in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:21
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(21): mysqli->query()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(12): ConexionBD->ejecutarConsulta()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 21
+[01-Nov-2024 19:33:42 UTC] PHP Warning:  Undefined array key "unidad" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/newEvent.php on line 16
+[01-Nov-2024 19:33:42 UTC] PHP Stack trace:
+[01-Nov-2024 19:33:42 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/newEvent.php:0
+[01-Nov-2024 19:34:35 UTC] PHP Warning:  Undefined array key "unidad" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/newEvent.php on line 16
+[01-Nov-2024 19:34:35 UTC] PHP Stack trace:
+[01-Nov-2024 19:34:35 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/newEvent.php:0
+[01-Nov-2024 19:36:31 UTC] PHP Warning:  Undefined array key "unidad" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/newEvent.php on line 16
+[01-Nov-2024 19:36:31 UTC] PHP Stack trace:
+[01-Nov-2024 19:36:31 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/newEvent.php:0
+[01-Nov-2024 19:36:49 UTC] PHP Warning:  Undefined array key "unidad" in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/newEvent.php on line 16
+[01-Nov-2024 19:36:49 UTC] PHP Stack trace:
+[01-Nov-2024 19:36:49 UTC] PHP   1. {main}() /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/newEvent.php:0
+[18-Feb-2025 16:16:03 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Host 'p3plzcpnl450414.prod.phx3.secureserver.net' is not allowed to connect to this MariaDB server in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:12
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(12): mysqli->__construct()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(5): ConexionBD->conectar()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 12
+[18-Feb-2025 16:16:03 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Host 'p3plzcpnl450414.prod.phx3.secureserver.net' is not allowed to connect to this MariaDB server in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php:12
+Stack trace:
+#0 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php(12): mysqli->__construct()
+#1 /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/query.php(5): ConexionBD->conectar()
+#2 {main}
+  thrown in /home/dv4i40wm3rs9/public_html/JornadaDigital.Oficina/php/ConexionBD.php on line 12
