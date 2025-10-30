@@ -1,63 +1,90 @@
-  /* Personalizar el fondo del calendario */
-  .fc {
-    background-color: #f0f0f0;
-  }
+/* ===== Estilo general del calendario ===== */
+.fc {
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 10px;
+}
 
-  /* Personalizar el fondo de los días */
-  /* .fc-daygrid-day {
-      background-color: #d3d3d3; 
-  } */
-  .fc-daygrid-day-number {
-    color: black;
-    /* Color del número del día */
-  }
+/* ===== Encabezado de días ===== */
+.fc-col-header-cell {
+  background-color: #ffb347;
+  color: #000;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
 
-  /* Personalizar el fondo de los encabezados */
-  .fc-col-header-cell {
-    background-color: orange;
-    /* Fondo gris oscuro para los encabezados */
-    color: orange;
-    /* Texto blanco para los encabezados */
-  }
+.fc-col-header-cell-cushion {
+  color: #000;
+}
 
-  /* Cambiar el color de los nombres de los días */
-  .fc-col-header-cell-cushion {
-    color: #000000;
-    /* Color de los nombres de los días */
-  }
+/* ===== Días del calendario ===== */
+.fc-daygrid-day-number {
+  color: #000;
+  font-weight: 500;
+}
 
-  /* Personalizar el fondo de los eventos */
-  .fc-event {
-    background-color: #a0a0a0;
-    /* Fondo gris para los eventos */
-    border-color: #808080;
-    /* Borde gris más oscuro para los eventos */
-    color: #fff;
-    color: #ffe403;
-    color: #eb9d0b;
-    /* Texto blanco para los eventos */
-  }
+/* ===== Eventos ===== */
+.fc-event {
+  background-color: #ffffff;
+  border: 1px solid #eb9d0b;
+  color: #fff;
+  border-radius: 6px;
+  padding: 3px 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-  .ql-editor img {
-    max-width: 300px;
-    height: auto;
-  }
+.fc-event:hover {
+  transform: scale(1.03);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
 
-  /* Cambiar el color de la letra dentro de los eventos */
-  .fc-event-time {
-    color: black;
-    
-    /* Cambia este color al que prefieras */
-  }
+/* ===== Texto dentro de los eventos ===== */
+.fc-event-time {
+  color: #ffb347;
+  font-size: 12px;
+  font-weight: 500;
+}
 
-  .fc-event-title {
-    color: white;
-    /* font-family: 'Courier New', Courier, monospace; */
-    font-size: 20px;
-    font-weight: bold; /* Hace la letra más gruesa */;
-    /* Cambia este color al que prefieras */
-  }
+.fc-event-title {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.3;
+}
 
-  #text {
-    height: 300px;
-  }
+/* ===== Plantilla personalizada para eventos (si usas innerHTML) ===== */
+.evento-card {
+  background-color: #ffffff;
+  color: #fff;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 12px;
+  line-height: 1.3;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.evento-header {
+  font-weight: 600;
+  color: #000000;
+  font-size: 13px;
+}
+
+.evento-body {
+  font-size: 11px;
+  color: #d1d1d1;
+}
+
+/* ===== Editor Quill ===== */
+.ql-editor img {
+  max-width: 300px;
+  height: auto;
+}
+
+/* ===== Área de texto ===== */
+#text {
+  height: 300px;
+}
