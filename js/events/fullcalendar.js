@@ -506,30 +506,61 @@ const updateStatusEvents = (data) => {
 
 
 const view_status_events_modal = (name_view) => {
-    $("#modal-body-events-status").empty();
-    getDataQuery(`SELECT * FROM view_${name_view};`)
-        .then((data) => {
-            data.map(element => {
-                $("#modal-body-events-status").append(`
-                    <div class="card shadow-sm border-0">
-                        <div class="card-header bg-info text-white d-flex justify-content-between align-items-center">
-                            <span ><i class="bi bi-person-fill"></i>${element.user}</span>
-                            <span class="small fs-4">Se espera atender en: <strong>${element.end}</strong></span>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title text-info">${element.title}</h5>
-                            <p class="card-text text-secondary">${element.text}</p>
-                            <div class="d-flex justify-content-end">
-                                <button type="button" class="btn btn-info" id="${element.id}" onClick="axios_select_red_byId(${element.id});">
-                                    Ver detalles <i class="bi bi-arrow-right-circle"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <hr />
-                `);
-            });
-            $("#modal-events-status").modal('show');
-        });
-}
+  $("#modal-body-events-status").empty();
+
+  getDataQuery(`SELECT * FROM view_${name_view};`)
+    .then((data) => {
+      if (!data.length) {
+        $("#modal-body-events-status").html(`
+          <div class="text-center py-5 text-muted">
+            <i class="bi bi-inbox fs-1 d-block mb-2"></i>
+            <p class="fw-semibold mb-0">No hay reportes en esta categoría</p>
+          </div>
+        `);
+        return;
+      }
+
+      data.forEach((element) => {
+        $("#modal-body-events-status").append(`
+          <div class="card shadow-sm border-0 mb-3 rounded-4 report-card">
+            <div class="card-header bg-gradient d-flex justify-content-between align-items-center rounded-top-4"
+                 style="background: linear-gradient(90deg, #0099ff, #00c6ff);">
+              <div class="d-flex align-items-center gap-2">
+                <div class="avatar bg-white text-dark fw-bold rounded-circle d-flex justify-content-center align-items-center" style="width:35px; height:35px;">
+                  ${element.user.charAt(0).toUpperCase()}
+                </div>
+                <div>
+                  <span class="fw-semibold text-white">${element.user}</span><br>
+                  <small class="text-light opacity-75">Responsable</small>
+                </div>
+              </div>
+              <div class="text-end">
+                <small class="text-white-50 d-block">Fecha estimada</small>
+                <span class="badge bg-light text-dark px-3 py-2 shadow-sm">${element.end}</span>
+              </div>
+            </div>
+
+            <div class="card-body bg-secondary">
+              <h5 class="card-title text-white mb-2">${element.title}</h5>
+              <p class="card-text text-secondary mb-3" style="white-space: pre-line;">
+                ${element.text || "<em>Sin descripción.</em>"}
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="badge rounded-pill text-bg-secondary px-3 py-2">
+                  ${element.type || "General"}
+                </span>
+                <button type="button" class="btn btn-outline-warning btn-sm fw-semibold"
+                        id="${element.id}" onClick="axios_select_red_byId(${element.id});">
+                  Ver detalles <i class="bi bi-arrow-right-circle ms-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        `);
+      });
+
+      $("#modal-events-status").modal("show");
+    });
+};
+
 /* ------- */

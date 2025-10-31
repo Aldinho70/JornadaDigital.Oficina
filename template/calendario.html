@@ -39,7 +39,6 @@
     align-items: center;
   }
 } */
-
 </style>
 
 <body class=" ">
@@ -150,14 +149,21 @@
                 <p class="card-text text-secondary">del total asignadas</p>
               </div>
             </div>
-          
+
             <!-- Conteo de actividades -->
             <div class="card shadow-lg border-0 rounded-4">
               <div class="card-header text-center fw-bold bg-primary text-white">
                 Conteo de estados de los eventos
               </div>
+
+              <div class="text-center text-muted small py-2 border-bottom">
+                <i class="bi bi-info-circle"></i> Da clic en una categoría para ver los reportes detallados
+              </div>
+
               <ul class="list-group list-group-flush">
-                <li class="list-group-item d-flex justify-content-between align-items-center py-3"
+
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center py-3 cursor-pointer list-group-item-action"
                   onclick="view_status_events_modal('sin_terminar');">
                   <div class="d-flex align-items-center">
                     <span class="badge bg-danger rounded-circle p-2 me-2"></span>
@@ -165,8 +171,9 @@
                   </div>
                   <span class="badge rounded-pill text-bg-danger px-3 py-2" id="cont-Sin_terminar">0</span>
                 </li>
-          
-                <li class="list-group-item d-flex justify-content-between align-items-center py-3"
+
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center py-3 cursor-pointer list-group-item-action"
                   onclick="view_status_events_modal('en_progreso');">
                   <div class="d-flex align-items-center">
                     <span class="badge bg-warning rounded-circle p-2 me-2"></span>
@@ -174,8 +181,9 @@
                   </div>
                   <span class="badge rounded-pill text-bg-warning px-3 py-2" id="cont-En_progreso">0</span>
                 </li>
-          
-                <li class="list-group-item d-flex justify-content-between align-items-center py-3"
+
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center py-3 cursor-pointer list-group-item-action"
                   onclick="view_status_events_modal('terminados');">
                   <div class="d-flex align-items-center">
                     <span class="badge bg-success rounded-circle p-2 me-2"></span>
@@ -183,11 +191,26 @@
                   </div>
                   <span class="badge rounded-pill text-bg-success px-3 py-2" id="cont-Terminado">0</span>
                 </li>
+
               </ul>
             </div>
-          
+
+            <!-- Footer de información -->
+            <div class="text-center small text-muted border-top pt-3">
+              <span class="d-block">📅 <strong>Calendario v7.3.4Beta</strong></span>
+              <span>Diseñado por <strong>JMBobadilla</strong></span>
+              <span>Exclusivo para <strong class="text-warning">Jornada Digital🛰️</strong></span>
+              <div class="mt-2">
+                <a href="https://www.linkedin.com/in/jesus-manuel-bobadilla-villagrana-b0374a354/" target="_blank"
+                  class="text-decoration-none text-primary">
+                  <i class="bi bi-linkedin fs-5"></i> LinkedIn
+                </a>
+              </div>
+            </div>
+
           </div>
-          
+
+
         </div>
       </div>
       <!-- //////////////////////////////////////////// -->
@@ -196,8 +219,8 @@
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-light">
         <!--  Titulos de contenedor de la pagina -->
         <div
-          class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom text-dark">
-          <h1 class="h2">Calendario de actividades.</h1>
+          class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2  border-bottom text-dark">
+          <h4>Calendario de actividades.</h4>
         </div>
         <!-- ///////////////////////////////////////// -->
         <div class="row">
@@ -285,138 +308,163 @@
   <!-- //////////////////////////////////////////////// -->
 
   <!-- Modal add new evento -->
-  <div class="modal" id="modal-add" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-xl" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="tituloEvento">
-            Agregar nuevo pendiente
+  <div class="modal fade" id="modal-add" tabindex="-1" aria-labelledby="modalAddLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg rounded-4">
+
+        <!-- Header -->
+        <div class="modal-header bg-warning text-white">
+          <h5 class="modal-title fw-semibold d-flex align-items-baseline gap-2">
+            <i class="bi bi-journal-plus"></i> Registrar nuevo reporte
           </h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
         </div>
-        <div class="modal-body">
-          <div id="descripcionEvento"></div>
-          <form onsubmit="event.preventDefault();" class="container mt-4" id="form-add-event">
-            <div class="row g-2">
-              <div class="col-md">
-                <div class="form-floating">
-                  <div class="mb-3">
-                    <label for="start" class="form-label">Fecha de inicio:</label>
-                    <input type="date" id="start" name="start" class="form-control start-end" disabled />
-                  </div>
-                </div>
+
+        <!-- Body -->
+        <div class="modal-body bg-body-tertiary">
+          <form class="needs-validation" id="form-add-event" novalidate>
+
+            <!-- Fechas -->
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="start" class="form-label fw-semibold">Fecha de inicio</label>
+                <input type="date" id="start" name="start" class="form-control start-end" disabled required>
               </div>
-              <div class="col-md">
-                <div class="form-floating">
-                  <div class="mb-3">
-                    <label for="end" class="form-label">Fecha de terminacion:</label>
-                    <input type="date" id="end" name="end" class="form-control start-end" />
-                  </div>
-                </div>
+              <div class="col-md-6">
+                <label for="end" class="form-label fw-semibold">Fecha de terminación</label>
+                <input type="date" id="end" name="end" class="form-control start-end" required>
+                <div class="invalid-feedback">Seleccione una fecha de finalización.</div>
               </div>
             </div>
-            <hr />
+
+            <hr class="my-4">
+
+            <!-- Título -->
             <div class="mb-3">
-              <label for="title-description" class="form-label">Titulo del evento</label>
-              <input type="text" class="form-control modal-add" id="title-description" />
-              <div id="title-description" class="form-text">
-                Poner un titulo corto pero descriptivo
-              </div>
+              <label for="title-description" class="form-label fw-semibold">Título del reporte</label>
+              <input type="text" class="form-control" id="title-description"
+                placeholder="Ej. Revisión técnica en cliente" required>
+              <div class="form-text">Debe ser breve y descriptivo.</div>
+              <div class="invalid-feedback">El título es obligatorio.</div>
             </div>
-            <hr />
+
+            <!-- Unidad -->
             <div class="mb-3">
-              <label for="unidad" class="form-label">Unidad</label>
-              <input type="text" class="form-control modal-add" id="unidad" />
-              <div id="unidad" class="form-text">
-                Unidad o cliente
-              </div>
+              <label for="unidad" class="form-label fw-semibold">Unidad o cliente</label>
+              <input type="text" class="form-control" id="unidad" placeholder="Ej. GAFI 512 o Cliente XYZ" required>
+              <div class="invalid-feedback">Ingrese una unidad o cliente.</div>
             </div>
-            <hr />
+
+            <!-- Usuario -->
             <div class="mb-3">
-              <label for="user" class="form-label">Nombre:</label>
-              <select name="user" id="user" class="form-select">
+              <label for="user" class="form-label fw-semibold">Responsable</label>
+              <select id="user" name="user" class="form-select" required>
+                <option value="">Seleccione...</option>
                 <option value="Alejandra">Alejandra</option>
                 <option value="Guillermo">Guillermo</option>
-                <option value="Jesus">Jesus</option>
+                <option value="Jesus">Jesús</option>
                 <option value="Juan de Dios">Juan de Dios</option>
                 <option value="Silvia">Silvia</option>
               </select>
-            </div>
-            <hr />
-            <div class="mb-3 d-none">
-              <label for="text" class="form-label modal-add">Descripci��n:</label>
-              <textarea id="text-parsed-quill" name="text" class="form-control modal-add" rows="5"
-                style="white-space: pre-wrap"></textarea>
-            </div>
-            <div id="container-text">
-              <div id="text"></div>
-            </div>
-            <input class="d-none" id="info" type="text" />
-            <hr />
-            <div class="mb-3">
-              <label for="txtColor" class="form-label">Tipo de evento:</label>
-              <select name="color" id="type" class="form-select">
-                <option value="Cobranza a clientes">
-                  Cobranza a clientes
-                </option>
-                <option value="Atenci��n a clientes">
-                  Atenci��n a clientes
-                </option>
-                <option value="Instalacion o servicio a clientes">
-                  Instalacion o servicio a clientes
-                </option>
-                <option value="Reporte de actividades">
-                  Reporte de actividades
-                </option>
-              </select>
-            </div>
-            <hr />
-            <div class="mb-3">
-              <label for="txtColor" class="form-label">Estatus del evento</label>
-              <select name="color" id="estatus" class="form-select">
-                <option value="red">En progreso</option>
-                <option value="#44eb0b">Finalizada</option>
-              </select>
+              <div class="invalid-feedback">Seleccione un responsable.</div>
             </div>
 
-            <button id="btnadd" class="btn btn-success" onclick="newEvent();">
-              Agregar
-            </button>
+            <!-- Descripción -->
+            <div class="mb-3">
+              <label for="text" class="form-label fw-semibold">Descripción detallada</label>
+              <div id="text" class="border rounded bg-secondary p-2"></div>
+              <textarea id="text-parsed-quill" name="text" class="d-none" required></textarea>
+              <div class="invalid-feedback">La descripción no puede estar vacía.</div>
+            </div>
+
+            <!-- Tipo -->
+            <div class="mb-3">
+              <label for="type" class="form-label fw-semibold">Tipo de reporte</label>
+              <select id="type" name="type" class="form-select" required>
+                <option value="">Seleccione...</option>
+                <option value="Cobranza a clientes">Cobranza a clientes</option>
+                <option value="Atención a clientes">Atención a clientes</option>
+                <option value="Instalación o servicio a clientes">Instalación o servicio a clientes</option>
+                <option value="Reporte de actividades">Reporte de actividades</option>
+              </select>
+              <div class="invalid-feedback">Seleccione un tipo de reporte.</div>
+            </div>
+
+            <!-- Estatus -->
+            <div class="mb-3">
+              <label for="estatus" class="form-label fw-semibold">Estatus del evento</label>
+              <select id="estatus" name="estatus" class="form-select" required>
+                <option value="">Seleccione...</option>
+                <option value="red">En progreso</option>
+                <option value="#44eb0b">Finalizado</option>
+              </select>
+              <div class="invalid-feedback">Seleccione un estatus válido.</div>
+            </div>
+
+            <div class="text-end mt-4">
+              <button id="btnadd" class="btn btn-success px-4" type="submit">
+                <i class="bi bi-check2-circle me-1"></i>Guardar reporte
+              </button>
+            </div>
+
           </form>
         </div>
       </div>
     </div>
   </div>
+
   <!-- //////////////////////////////////////////////// -->
 
   <!-- Modal para events status -->
-  <div class="modal" tabindex="-1" id="modal-events-status">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Estados de los eventos</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  <div class="modal fade" id="modal-events-status" tabindex="-1">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content border-0 shadow-lg rounded-4">
+
+        <div class="modal-header bg-warning text-white rounded-top-4">
+          <h5 class="modal-title fw-semibold">
+            <i class="bi bi-list-task me-2"></i>Estados de los eventos
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
         </div>
-        <div class="container d-flex mb-3">
-          <button class="btn btn-outline-info me-2" onclick="filterByUser('Alejandra')">
-            Alejandra
-          </button>
-          <button class="btn btn-outline-info me-2" onclick="filterByUser('Guillermo')">
-            Guillermo
-          </button>
-          <button class="btn btn-outline-info me-2" onclick="filterByUser('Juan de Dios')">
-            Juan de Dios
-          </button>
-          <button class="btn btn-outline-info" onclick="filterByUser('all')">
-            Ver todos
-          </button>
+
+        <div class="modal-body p-4">
+          <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+            <button class="btn btn-outline-warning rounded-pill px-4" onclick="filterByUser('Alejandra')">
+              <i class="bi bi-person-fill"></i> Alejandra
+            </button>
+            <button class="btn btn-outline-warning rounded-pill px-4" onclick="filterByUser('Guillermo')">
+              <i class="bi bi-person-fill"></i> Guillermo
+            </button>
+            <button class="btn btn-outline-warning rounded-pill px-4" onclick="filterByUser('Juan de Dios')">
+              <i class="bi bi-person-fill"></i> Juan de Dios
+            </button>
+            <button class="btn btn-outline-warning rounded-pill px-4" onclick="filterByUser('Silvia')">
+              <i class="bi bi-person-fill"></i> Silvia
+            </button>
+            <button class="btn btn-outline-warning rounded-pill px-4" onclick="filterByUser('Jesus')">
+              <i class="bi bi-person-fill"></i> Jesus
+            </button>
+            <button class="btn btn-outline-secondary rounded-pill px-4" onclick="filterByUser('all')">
+              <i class="bi bi-people-fill"></i> Ver todos
+            </button>
+          </div>
+
+          <div id="modal-body-events-status" class="mt-2"
+            style="max-height: 60vh; overflow-y: auto; padding-right: 5px; ">
+            <!-- Aquí se insertan los reportes dinámicamente -->
+          </div>
         </div>
-        <div class="modal-body" id="modal-body-events-status"></div>
-        <div class="modal-footer"></div>
+
+        <div class="modal-footer bg-dark rounded-bottom-4">
+          <small class="text-muted fst-italic">
+            <i class="bi bi-info-circle"></i> Selecciona un usuario para filtrar los reportes.
+          </small>
+        </div>
+
       </div>
     </div>
   </div>
+
   <!-- ------------------------ -->
 
   <!-- JS CDN -->
