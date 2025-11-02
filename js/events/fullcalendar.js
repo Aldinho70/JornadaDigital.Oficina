@@ -27,6 +27,7 @@ $(function () {
         contentHeight: "auto", // Evita que el contenido se corte
         expandRows: true, // Asegura que las filas se expandan completamente
         useHTML: true,
+        hiddenDays: [0],
         /**Eventos nativos de la tabla */
         dateClick: function (info) {
             initCreateEvent(info);
@@ -34,8 +35,10 @@ $(function () {
         eventClick: function (info) {
             const e = info.event;
             const atendido = e.extendedProps.atendido == 1;
-            const estadoColor = atendido ? "success" : "danger";
-            const estadoTexto = atendido ? "Finalizado" : "Pendiente";
+            const estadoTexto = ( info.event.backgroundColor  == '#44eb0b' ) ? "Finalizado" : "Pendiente" ;
+            const estadoColor = ( info.event.backgroundColor  == '#44eb0b' ) ? "success" : "danger" ;
+            console.log( info.event.backgroundColor );
+            
 
             $("#modal-title-view").html(`
                 <div class="d-flex align-items-baseline gap-2">
@@ -59,7 +62,7 @@ $(function () {
                     </div>
                     <div>
                         <span class="badge bg-${estadoColor} px-3 py-2">
-                        <i class="bi ${atendido ? 'bi-check-circle' : 'bi-x-circle'} me-1"></i>${estadoTexto}
+                        <i class="bi ${(estadoColor == 'success') ? 'bi-check-circle' : 'bi-x-circle'} me-1"></i>${estadoTexto}
                         </span>
                     </div>
                     </div>
@@ -124,6 +127,7 @@ $(function () {
             const { title, extendedProps } = info.event;
             const user = extendedProps.user;
             const atendido = extendedProps.atendido;
+            const unidad = extendedProps.unidad;
 
 
             // Definimos el color de la franja (verde o rojo)
@@ -133,21 +137,22 @@ $(function () {
             return {
                 html: `
                 <div class="evento-card">
+                    
                     <div class="evento-header px-2" style="border-left: 15px solid ${info.backgroundColor};">
-                    <strong>${title}</strong>
+                        ${ unidad 
+                            ? `<strong>${unidad}</strong>`
+                            : `<strong class="text-light">No data</strong>`
+                        }
                     </div>
-                    <div class="evento-body">
-                    <small class="text-dark fs-6">${user}</small>
+                    <div class="evento-body d-flex flex-column">
+                        <small class="text-dark fs-6">${title}</small>
+                        <small class="text-dark fs-6">${user}</small>
                     </div>
                 </div>
                 `
             };
         },
-
-        /**Eventos registrados dentro del calendario se inserta mediante un link  */
-        //   events: 'http://localhost/NullPointer.com/JornadaDigital.Oficina/php/conexion.php',
         events: "../php/conexion.php",
-        //    events:'http://ws4cjdg.com/JornadaDigital.Oficina/php/conexion.php',
     });
 
     //Objeto del calendario con el
