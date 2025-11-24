@@ -1,4 +1,25 @@
 $(function () {
+    const params = new URLSearchParams(window.location.search);
+    if (params.has("version")) {
+        if(params.get("version") == "iframe"){
+            $("#root-header").addClass("visually-hidden")
+
+            // const sidebar = document.getElementById("sidebarMenu");
+            // const offcanvas = bootstrap.Offcanvas.getOrCreateInstance(sidebar);
+
+            // Abrir
+            // offcanvas.show();
+
+            // Cerrar
+            // offcanvas.hide();
+
+            // Alternar
+            // offcanvas.toggle();
+            // $("#sidebarMenu").offcanvas("hide");
+        }
+    }
+
+    
     /**Inicializamos QUill.js */
     initQuill();
 
