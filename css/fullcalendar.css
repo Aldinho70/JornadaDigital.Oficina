@@ -3,7 +3,7 @@
   background-color: #f4f4f4;
   border-radius: 10px;
   padding: 10px;
-  height: 80vh; /* Altura fija para permitir scroll interno */
+  height: 92vh; /* Altura fija para permitir scroll interno */
   overflow: hidden;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 }

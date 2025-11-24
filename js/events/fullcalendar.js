@@ -44,7 +44,7 @@ $(function () {
         initialView: "dayGridMonth",
         /**Lenaguaje de la tabla ES/MX */
         locale: "es",
-        height: "auto", // Ajusta la altura autom��ticamente
+        height: "150%", // Ajusta la altura autom��ticamente
         contentHeight: "auto", // Evita que el contenido se corte
         expandRows: true, // Asegura que las filas se expandan completamente
         useHTML: true,
