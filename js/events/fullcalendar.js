@@ -173,7 +173,7 @@ $(function () {
                 `
             };
         },
-        events: "../php/conexion.php",
+        events: "https://ws4cjdg.com/JDigitalReports/src/api/routes/calendar/getEventsCalendar.php",
     });
 
     //Objeto del calendario con el
