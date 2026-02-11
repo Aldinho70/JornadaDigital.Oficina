@@ -313,7 +313,7 @@
       <div class="modal-content border-0 shadow-lg rounded-4">
 
         <!-- Header -->
-        <div class="modal-header bg-warning text-white">
+        <div class="modal-header bg-warning text-white" style="max-height: 5px;">
           <h5 class="modal-title fw-semibold d-flex align-items-baseline gap-2">
             <i class="bi bi-journal-plus"></i> Registrar nuevo reporte
           </h5>
@@ -337,36 +337,61 @@
               </div>
             </div>
 
-            <hr class="my-4">
+            <hr class="my-2">
 
             <!-- Título -->
-            <div class="mb-3">
-              <label for="title-description" class="form-label fw-semibold">Título del reporte</label>
-              <input type="text" class="form-control" id="title-description"
-                placeholder="Ej. Revisión técnica en cliente" required>
-              <div class="form-text">Debe ser breve y descriptivo.</div>
-              <div class="invalid-feedback">El título es obligatorio.</div>
+            <div class="row g-3">
+              <div class="col-6">
+                <label for="type" class="form-label fw-semibold">Titulo o tipo de reporte</label>
+                <select id="title-description" name="type" class="form-select" required>
+                  <option value="">Seleccione...</option>
+                  <option value="Cobranza a clientes">Cobranza a clientes</option>
+                  <option value="Atención a clientes">Atención a clientes</option>
+                  <option value="Instalación o servicio a clientes">Instalación o servicio a clientes</option>
+                  <option value="Reporte de actividades">Reporte de actividades</option>
+                </select>
+                <div class="invalid-feedback">Seleccione un tipo de reporte.</div>
+              </div>
+
+              <!-- Usuario -->
+              <div class="col-6">
+                <div class="mb-1">
+                  <label for="user" class="form-label fw-semibold">Responsable</label>
+                  <select id="user" name="user" class="form-select" required>
+                    <option value="">Seleccione...</option>
+                    <option value="Alejandra">Alejandra</option>
+                    <option value="Guillermo">Guillermo</option>
+                    <option value="Jesus">Jesús</option>
+                    <option value="Juan de Dios">Juan de Dios</option>
+                    <option value="Silvia">Silvia</option>
+                  </select>
+                  <div class="invalid-feedback">Seleccione un responsable.</div>
+                </div>
+              </div>
             </div>
 
-            <!-- Unidad -->
-            <div class="mb-3">
-              <label for="unidad" class="form-label fw-semibold">Unidad o cliente</label>
-              <input type="text" class="form-control" id="unidad" placeholder="Ej. GAFI 512 o Cliente XYZ" required>
-              <div class="invalid-feedback">Ingrese una unidad o cliente.</div>
-            </div>
+            <div class="row g-3">
+              <!-- Unidad -->
+              <div class="col-6">
+                <div class="mb-1">
+                  <label for="unidad" class="form-label fw-semibold">Unidad o cliente</label>
+                  <input type="text" class="form-control" id="unidad" placeholder="Ej. GAFI 512 o Cliente XYZ" required>
+                  <div class="invalid-feedback">Ingrese una unidad o cliente.</div>
+                </div>
+              </div>
 
-            <!-- Usuario -->
-            <div class="mb-3">
-              <label for="user" class="form-label fw-semibold">Responsable</label>
-              <select id="user" name="user" class="form-select" required>
-                <option value="">Seleccione...</option>
-                <option value="Alejandra">Alejandra</option>
-                <option value="Guillermo">Guillermo</option>
-                <option value="Jesus">Jesús</option>
-                <option value="Juan de Dios">Juan de Dios</option>
-                <option value="Silvia">Silvia</option>
-              </select>
-              <div class="invalid-feedback">Seleccione un responsable.</div>
+              <!-- Estatus -->
+              <div class="col-6">
+                  <div class="mb-1">
+                    <label for="estatus" class="form-label fw-semibold">Estatus del evento</label>
+                    <select id="estatus" name="estatus" class="form-select" required>
+                      <option value="">Seleccione...</option>
+                      <option value="red">En progreso</option>
+                      <option value="#44eb0b">Finalizado</option>
+                    </select>
+                    <div class="invalid-feedback">Seleccione un estatus válido.</div>
+                  </div>
+              </div>  
             </div>
 
             <!-- Descripción -->
@@ -377,7 +402,7 @@
               <div class="invalid-feedback">La descripción no puede estar vacía.</div>
             </div>
 
-            <!-- Tipo -->
+            <!-- Tipo
             <div class="mb-3">
               <label for="type" class="form-label fw-semibold">Tipo de reporte</label>
               <select id="type" name="type" class="form-select" required>
@@ -388,18 +413,7 @@
                 <option value="Reporte de actividades">Reporte de actividades</option>
               </select>
               <div class="invalid-feedback">Seleccione un tipo de reporte.</div>
-            </div>
-
-            <!-- Estatus -->
-            <div class="mb-3">
-              <label for="estatus" class="form-label fw-semibold">Estatus del evento</label>
-              <select id="estatus" name="estatus" class="form-select" required>
-                <option value="">Seleccione...</option>
-                <option value="red">En progreso</option>
-                <option value="#44eb0b">Finalizado</option>
-              </select>
-              <div class="invalid-feedback">Seleccione un estatus válido.</div>
-            </div>
+            </div> -->
 
             <div class="text-end mt-4">
               <button id="btnadd" class="btn btn-success px-4" onclick="newEvent();">

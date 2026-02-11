@@ -206,7 +206,8 @@ $(function () {
                 final: $("#end").val(),
                 text: $("#text-parsed-quill").val(),
                 user: $("#user").val(),
-                type: $("#type").val(),
+                // type: $("#type").val(),
+                type: 'Atención a clientes',
                 atendido: false,
             },
         }; //console.log(objeto);
