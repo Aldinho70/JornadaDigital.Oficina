@@ -17,82 +17,10 @@
 
   <!-- CSS Estaticos -->
   <link href="../css/bootstrap.min.css" rel="stylesheet" />
-  <link href="../css/dashboard.css" rel="stylesheet" />
-  <link href="../css/style.css" rel="stylesheet" />
   <link href="../css/fullcalendar.css" rel="stylesheet" />
 </head>
 
-<style>
-  /* @media (max-width: 768px) {
-  #calendar {
-    width: 100%;
-    height: auto !important;
-  }
-
-  .fc-toolbar {
-    flex-direction: column;
-  }
-
-  .fc-header-toolbar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-} */
-</style>
-
 <body class="container-fluid ">
-  <!-- Menu responsivo -->
-  <!-- <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
-      aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
-      <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
-        <use href="#circle-half"></use>
-      </svg>
-      <span class="visually-hidden" id="bd-theme-text">Tema</span>
-    </button>
-    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-      <li>
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
-          aria-pressed="false">
-          <svg class="bi me-2 opacity-50" width="1em" height="1em">
-            <use href="#sun-fill"></use>
-          </svg>
-          Claro
-          <svg class="bi ms-auto d-none" width="1em" height="1em">
-            <use href="#check2"></use>
-          </svg>
-        </button>
-      </li>
-      <li>
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
-          aria-pressed="false">
-          <svg class="bi me-2 opacity-50" width="1em" height="1em">
-            <use href="#moon-stars-fill"></use>
-          </svg>
-          Oscuro
-          <svg class="bi ms-auto d-none" width="1em" height="1em">
-            <use href="#check2"></use>
-          </svg>
-        </button>
-      </li>
-      <li>
-        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
-          aria-pressed="true">
-          <svg class="bi me-2 opacity-50" width="1em" height="1em">
-            <use href="#circle-half"></use>
-          </svg>
-          Auto
-          <svg class="bi ms-auto d-none" width="1em" height="1em">
-            <use href="#check2"></use>
-          </svg>
-        </button>
-      </li>
-    </ul>
-  </div> -->
-  <!--///////////////////////////////////////////////////  -->
-
-  <!-- Header -->
   <header class="" id="root-header" data-bs-theme="dark">
     <!-- <a class="navbar-brand" href="#">
       <img src="../img/logojd.png" width="30" height="24" alt="" />
@@ -132,12 +60,8 @@
         <div class="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu"
           aria-labelledby="sidebarMenuLabel">
           <div class="offcanvas-header">
-            <a class="navbar-brand" href="#">
-              <img src="../img/logojd.png" width="30" height="24" alt="" />
-              Jornada Digital
-            </a>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu"
-              aria-label="Close"></button>
+            <a class="navbar-brand" href="#"> <img src="../img/logojd.png" width="30" height="24" alt="" /> Jornada Digital</a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body d-md-flex flex-column gap-3 p-3 overflow-y-auto">
 
@@ -207,88 +131,17 @@
                 </a>
               </div>
             </div>
-
           </div>
-
-
         </div>
       </div>
       <!-- //////////////////////////////////////////// -->
 
       <!-- Main principal -->
-      <main class="col-md-10 ms-sm-auto col-lg-10 px-md-4 bg-light">
-        <!--  Titulos de contenedor de la pagina -->
-        <!--<div
-          class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2  border-bottom text-dark">
-          <h4>Calendario de actividades.</h4>
-        </div>-->
-        <!-- ///////////////////////////////////////// -->
+      <main class="col-md-10 ms-sm-auto col-lg-10 bg-light">
         <div class="row">
-          <!-- Conteo de las actvidades -->
-          <!-- <div class="col-md-4">
-            <div class="card shadow-sm h-100">
-              <div class="card-header  text-center fw-bold">
-                Conteo de estados de los eventos
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item d-flex justify-content-between align-items-center"
-                  onclick="view_status_events_modal('sin_terminar');">
-                  <div>
-                    <svg class="bd-placeholder-img rounded me-2" width="20" height="20"
-                      xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
-                      focusable="false">
-                      <rect width="100%" height="100%" fill="#e74c3c"></rect>
-                    </svg>
-                    <span class="fw-semibold">Sin terminar</span>
-                  </div>
-                  <span class="badge rounded-pill text-bg-danger" id="cont-Sin_terminar">0</span>
-                </li>
-
-                <li class="list-group-item d-flex justify-content-between align-items-center"
-                  onclick="view_status_events_modal('en_progreso');">
-                  <div>
-                    <svg class="bd-placeholder-img rounded me-2" width="20" height="20"
-                      xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
-                      focusable="false">
-                      <rect width="100%" height="100%" fill="#f5b041"></rect>
-                    </svg>
-                    <span class="fw-semibold">En progreso</span>
-                  </div>
-                  <span class="badge rounded-pill text-bg-warning" id="cont-En_progreso">0</span>
-                </li>
-
-                <li class="list-group-item d-flex justify-content-between align-items-center"
-                  onclick="view_status_events_modal('terminados');">
-                  <div>
-                    <svg class="bd-placeholder-img rounded me-2" width="20" height="20"
-                      xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
-                      focusable="false">
-                      <rect width="100%" height="100%" fill="#2ecc71"></rect>
-                    </svg>
-                    <span class="fw-semibold">Terminado</span>
-                  </div>
-                  <span class="badge rounded-pill text-bg-success" id="cont-Terminado">0</span>
-                </li>
-              </ul>
-            </div>
-          </div> -->
-
-          <!-- Pendientes terminados -->
-          <div class="col-md-4">
-            <!-- <div class="card text-center shadow-sm border-0 h-100">
-              <div class="card-body">
-                <h5 class="card-title text-muted">Pendientes terminados</h5>
-                <h1 class="display-1 text-success" id="cont-porcent">0%</h1>
-                <p class="card-text text-secondary">del total asignadas</p>
-              </div>
-            </div> -->
-          </div>
-
-          <!-- Calendario -->
           <div class="text-dark w-100 " id="calendar"></div>
         </div>
       </main>
-      <!-- //////////////////////////////////////////// -->
     </div>
   </div>
 
