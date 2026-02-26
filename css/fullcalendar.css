@@ -290,3 +290,8 @@
 #calendarSearch{
   background: black !important;
 }
+.sticky-panel {
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+}

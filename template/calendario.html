@@ -54,96 +54,59 @@
 
   <!-- Conenido -->
   <div class="container-fluid text-dark">
-    <div class="row">
-      <!-- Menu lateral -->
-      <div class="sidebar border border-right col-md-2 col-lg-2 p-0 bg-body-tertiary text-dark" >
+  <div class="row">
+    
+    <!-- Panel izquierdo fijo -->
+    <div class="col-md-2 col-lg-2 p-3 bg-body-tertiary border-end">
+      
+      <div class="sticky-panel">
 
-        <div class="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel" >
-          <div class="offcanvas-header">
-            <a class="navbar-brand" href="#"> <img src="../img/logojd.png" width="30" height="24" alt="" /> Jornada Digital</a>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body d-md-flex flex-column gap-3 p-3 overflow-y-auto">
-
-            <!-- Porcentaje -->
-            <div class="card text-center shadow-lg border-0 rounded-4">
-              <div class="card-body">
-                <h5 class="card-title text-muted fw-semibold">Pendientes terminados</h5>
-                <h1 class="display-3 text-success fw-bold" id="cont-porcent">0%</h1>
-                <p class="card-text text-secondary">del total asignadas</p>
-              </div>
-            </div>
-
-            <!-- Conteo de actividades -->
-            <div class="card shadow-lg border-0 rounded-4">
-              <div class="card-header text-center fw-bold bg-primary text-white">
-                Conteo de estados de los eventos
-              </div>
-
-              <div class="text-center text-muted small py-2 border-bottom">
-                <i class="bi bi-info-circle"></i> Da clic en una categoría para ver los reportes detallados
-              </div>
-
-              <ul class="list-group list-group-flush">
-
-                <li
-                  class="list-group-item d-flex justify-content-between align-items-center py-3 cursor-pointer list-group-item-action"
-                  onclick="view_status_events_modal('sin_terminar');">
-                  <div class="d-flex align-items-center">
-                    <span class="badge bg-danger rounded-circle p-2 me-2"></span>
-                    <span class="fw-semibold">Sin terminar</span>
-                  </div>
-                  <span class="badge rounded-pill text-bg-danger px-3 py-2" id="cont-Sin_terminar">0</span>
-                </li>
-
-                <li
-                  class="list-group-item d-flex justify-content-between align-items-center py-3 cursor-pointer list-group-item-action"
-                  onclick="view_status_events_modal('en_progreso');">
-                  <div class="d-flex align-items-center">
-                    <span class="badge bg-warning rounded-circle p-2 me-2"></span>
-                    <span class="fw-semibold">En progreso</span>
-                  </div>
-                  <span class="badge rounded-pill text-bg-warning px-3 py-2" id="cont-En_progreso">0</span>
-                </li>
-
-                <li
-                  class="list-group-item d-flex justify-content-between align-items-center py-3 cursor-pointer list-group-item-action"
-                  onclick="view_status_events_modal('terminados');">
-                  <div class="d-flex align-items-center">
-                    <span class="badge bg-success rounded-circle p-2 me-2"></span>
-                    <span class="fw-semibold">Terminado</span>
-                  </div>
-                  <span class="badge rounded-pill text-bg-success px-3 py-2" id="cont-Terminado">0</span>
-                </li>
-
-              </ul>
-            </div>
-
-            <!-- Footer de información -->
-            <div class="text-center small text-muted border-top pt-3">
-              <span class="d-block">📅 <strong>Calendario v7.3.4Beta</strong></span>
-              <span>Diseñado por <strong>JMBobadilla</strong></span>
-              <span>Exclusivo para <strong class="text-warning">Jornada Digital🛰️</strong></span>
-              <div class="mt-2">
-                <a href="https://www.linkedin.com/in/jesus-manuel-bobadilla-villagrana-b0374a354/" target="_blank"
-                  class="text-decoration-none text-primary">
-                  <i class="bi bi-linkedin fs-5"></i> LinkedIn
-                </a>
-              </div>
-            </div>
+        <!-- Porcentaje -->
+        <div class="card text-center shadow-lg border-0 rounded-4 mb-3">
+          <div class="card-body">
+            <h5 class="card-title text-muted fw-semibold">Pendientes terminados</h5>
+            <h1 class="display-3 text-success fw-bold" id="cont-porcent">0%</h1>
+            <p class="card-text text-secondary">del total asignadas</p>
           </div>
         </div>
+
+        <!-- Conteo -->
+        <div class="card shadow-lg border-0 rounded-4 mb-3">
+          <div class="card-header text-center fw-bold bg-primary text-white">
+            Conteo de estados
+          </div>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-between cursor-pointer"
+                onclick="view_status_events_modal('sin_terminar');">
+              Sin terminar
+              <span class="badge text-bg-danger" id="cont-Sin_terminar">0</span>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between cursor-pointer"
+                onclick="view_status_events_modal('en_progreso');">
+              En progreso
+              <span class="badge text-bg-warning" id="cont-En_progreso">0</span>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between cursor-pointer"
+                onclick="view_status_events_modal('terminados');">
+              Terminado
+              <span class="badge text-bg-success" id="cont-Terminado">0</span>
+            </li>
+          </ul>
+        </div>
+
       </div>
-      <!-- //////////////////////////////////////////// -->
-
-      <!-- Main principal -->
-      <main class="col-md-10 ms-sm-auto col-lg-10 bg-light">
-        <div class="row">
-          <div class="text-dark w-100 " id="calendar"></div>
-        </div>
-      </main>
     </div>
+
+    <!-- Calendario -->
+    <main class="col-md-10 col-lg-10 bg-light">
+      <div id="calendar"></div>
+    </main>
+
   </div>
+</div>
 
   <!-- Modal view old evento -->
   <div class="modal" id="modal-view" tabindex="-1">
