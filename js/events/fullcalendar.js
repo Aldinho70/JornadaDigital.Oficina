@@ -7,50 +7,60 @@ $(function () {
     initQuill();
     $("#btnadd").attr("type", "button");
 
-    getDataQuery("SELECT * FROM `view_status_events`;").then((data) => {
-        updateStatusEvents(data);
-    });
+    // getDataQuery("SELECT * FROM `view_status_events`;").then((data) => {
+    //     updateStatusEvents(data);
+    // });
 
-    getDataQuery("SELECT * FROM `view_promedio_terminados`;").then((data) => {
-        data.forEach((element) => {
-            $("#cont-porcent").text(`${Math.round(element.PROMEDIO)}%`);
-        });
-    });
+    // getDataQuery("SELECT * FROM `view_promedio_terminados`;").then((data) => {
+    //     data.forEach((element) => {
+    //         $("#cont-porcent").text(`${Math.round(element.PROMEDIO)}%`);
+    //     });
+    // });
 
     const calendarEl = document.getElementById("calendar");
     const calendar = new FullCalendar.Calendar(calendarEl, buildCalendarConfig());
     calendar.render();
 
-    // Crear buscador
-   setTimeout(() => {
-    const toolbar = document.querySelector(".fc-toolbar-chunk");
+    initCalendarSearch();
 
-    // Contenedor
-    const wrapper = document.createElement("div");
-    wrapper.className = "d-flex align-items-center ms-2";
+    function getCalendarFilterValue() {
+        return document.getElementById("calendarSearch")?.value?.trim() || "";
+    }
 
-    // Input
-    const input = document.createElement("input");
-    input.type = "text";
-    input.id = "calendarSearch";
-    input.className = "form-control form-control-sm me-2 fc-button";
-    input.style.width = "180px";
+    function initCalendarSearch() {
+        const toolbar = document.querySelector(".fc-toolbar-chunk");
+        if (!toolbar || document.getElementById("calendarSearch")) {
+            return;
+        }
 
-    // Botón buscar
-    const button = document.createElement("button");
-    button.textContent = "Buscar";
-    button.className = "fc-button fc-button-primary fc-button-active";
+        const wrapper = document.createElement("div");
+        wrapper.className = "d-flex align-items-center ms-2";
 
-    button.addEventListener("click", function () {
-        calendar.removeAllEvents();
-        calendar.refetchEvents();
-    });
+        const input = document.createElement("input");
+        input.type = "text";
+        input.id = "calendarSearch";
+        input.className = "form-control form-control-sm me-2 fc-button";
+        input.style.width = "180px";
 
-    wrapper.appendChild(input);
-    wrapper.appendChild(button);
-    toolbar.appendChild(wrapper);
+        const button = document.createElement("button");
+        button.textContent = "Buscar";
+        button.className = "fc-button fc-button-primary";
 
-    }, 200);
+        button.addEventListener("click", function () {
+            calendar.refetchEvents();
+        });
+
+        input.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                calendar.refetchEvents();
+            }
+        });
+
+        wrapper.appendChild(input);
+        wrapper.appendChild(button);
+        toolbar.appendChild(wrapper);
+    }
 
     window.calendar = calendar;
     window.deleteEvent = deleteEvent;
@@ -63,7 +73,7 @@ $(function () {
         const persistedView = localStorage.getItem(storageViewKey);
         const eventEndpoint =
             window.CALENDAR_EVENTS_ENDPOINT ||
-            "http://ws4cjdg.com/JDigitalReportsV2/src/api/routes/calendar/getEventsCalendar.php";
+            "http://ws4cjdg.com/JDigitalReportsV2/src/api/routes/calendar/getEventsCalendar.php?filter=GUZMAN";
 
         const defaults = {
             initialView: persistedView || "dayGridMonth",
@@ -168,7 +178,7 @@ $(function () {
                 url: eventEndpoint,
                 extraParams: function () {
                     return {
-                        filter: document.getElementById("calendarSearch")?.value || ""
+                        filter: getCalendarFilterValue()
                     };
                 },
                 failure: function (error) {
@@ -592,6 +602,8 @@ function filterByUser(user) {
 }
 
 const updateStatusEvents = (data) => {
+    console.log(data);
+    
     data.forEach((element) => {
         $(`#cont-${element.Status.replaceAll(" ", "_")}`).text(element.Total);
     });
@@ -657,3 +669,4 @@ const view_status_events_modal = (name_view) => {
 window.imgParser = imgParser;
 window.filterByUser = filterByUser;
 window.view_status_events_modal = view_status_events_modal;
+
