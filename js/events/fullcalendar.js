@@ -21,6 +21,37 @@ $(function () {
     const calendar = new FullCalendar.Calendar(calendarEl, buildCalendarConfig());
     calendar.render();
 
+    // Crear buscador
+   setTimeout(() => {
+    const toolbar = document.querySelector(".fc-toolbar-chunk");
+
+    // Contenedor
+    const wrapper = document.createElement("div");
+    wrapper.className = "d-flex align-items-center ms-2";
+
+    // Input
+    const input = document.createElement("input");
+    input.type = "text";
+    input.id = "calendarSearch";
+    input.className = "form-control form-control-sm me-2 fc-button";
+    input.style.width = "180px";
+
+    // Botón buscar
+    const button = document.createElement("button");
+    button.textContent = "Buscar";
+    button.className = "fc-button fc-button-primary fc-button-active";
+
+    button.addEventListener("click", function () {
+        calendar.removeAllEvents();
+        calendar.refetchEvents();
+    });
+
+    wrapper.appendChild(input);
+    wrapper.appendChild(button);
+    toolbar.appendChild(wrapper);
+
+    }, 200);
+
     window.calendar = calendar;
     window.deleteEvent = deleteEvent;
     window.updateEvent = updateEvent;
@@ -32,7 +63,7 @@ $(function () {
         const persistedView = localStorage.getItem(storageViewKey);
         const eventEndpoint =
             window.CALENDAR_EVENTS_ENDPOINT ||
-            "http://ws4cjdg.com/JDigitalReports/src/api/routes/calendar/getEventsCalendar.php";
+            "http://ws4cjdg.com/JDigitalReportsV2/src/api/routes/calendar/getEventsCalendar.php";
 
         const defaults = {
             initialView: persistedView || "dayGridMonth",
@@ -58,7 +89,7 @@ $(function () {
             stickyHeaderDates: true,
             progressiveEventRendering: true,
             headerToolbar: {
-                left: "prev,next today refreshEvents toggleSunday",
+                left: "prev,next today refreshEvents",
                 center: "title",
                 right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek",
             },
@@ -74,16 +105,8 @@ $(function () {
                     text: "Actualizar",
                     click: function () {
                         calendar.refetchEvents();
-                    },
-                },
-                toggleSunday: {
-                    text: "Domingo",
-                    click: function () {
-                        const hiddenDays = calendar.getOption("hiddenDays") || [];
-                        const isSundayHidden = hiddenDays.includes(0);
-                        calendar.setOption("hiddenDays", isSundayHidden ? [] : [0]);
-                    },
-                },
+                    }
+                }
             },
             slotMinTime: "06:00:00",
             slotMaxTime: "22:00:00",
@@ -143,10 +166,16 @@ $(function () {
             },
             events: {
                 url: eventEndpoint,
+                extraParams: function () {
+                    return {
+                        filter: document.getElementById("calendarSearch")?.value || ""
+                    };
+                },
                 failure: function (error) {
                     console.error("Error cargando eventos:", error);
                 },
             },
+            
         };
 
         const externalConfig = window.CALENDAR_CONFIG || {};

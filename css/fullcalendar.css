@@ -286,3 +286,7 @@
     align-items: stretch !important;
   }
 }
+
+#calendarSearch{
+  background: black !important;
+}
