@@ -23,7 +23,7 @@ $(function () {
 
     initCalendarSearch();
 
-    function getCalendarFilterValue() {
+    function getCalendarFilterValue( value = "" ) {
         return document.getElementById("calendarSearch")?.value?.trim() || "";
     }
 
@@ -33,12 +33,10 @@ $(function () {
             return;
         }
 
-        const wrapper = document.createElement("div");
-        wrapper.className = "d-flex align-items-center ms-2";
-
         const input = document.createElement("input");
         input.type = "text";
         input.id = "calendarSearch";
+        input.placeholder = "Buscar...";
         input.className = "form-control form-control-sm me-2 fc-button";
         input.style.width = "180px";
 
@@ -57,9 +55,8 @@ $(function () {
             }
         });
 
-        wrapper.appendChild(input);
-        wrapper.appendChild(button);
-        toolbar.appendChild(wrapper);
+        toolbar.appendChild(input);
+        toolbar.appendChild(button);
     }
 
     window.calendar = calendar;
@@ -99,7 +96,7 @@ $(function () {
             stickyHeaderDates: true,
             progressiveEventRendering: true,
             headerToolbar: {
-                left: "prev,next today refreshEvents",
+                left: "prev,next today refreshEvents allEvents",
                 center: "title",
                 right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek",
             },
@@ -114,6 +111,13 @@ $(function () {
                 refreshEvents: {
                     text: "Actualizar",
                     click: function () {
+                        calendar.refetchEvents();
+                    }
+                },
+                allEvents: {
+                    text: "Todos los eventos",
+                    click: function () {
+                        $("#calendarSearch").val('');
                         calendar.refetchEvents();
                     }
                 }
