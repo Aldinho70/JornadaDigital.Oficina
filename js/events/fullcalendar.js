@@ -290,11 +290,6 @@ $(function () {
         const text = $("#text-parsed-quill").val();
         const editingId = $("#form-add-event").data("editing-id") || null;
 
-        if (!start || !end || !title || !user || !unidad || !estatus || !text) {
-            alert("Completa todos los campos obligatorios antes de guardar.");
-            return;
-        }
-
         if (new Date(end) < new Date(start)) {
             alert("La fecha de fin no puede ser menor que la fecha de inicio.");
             return;
