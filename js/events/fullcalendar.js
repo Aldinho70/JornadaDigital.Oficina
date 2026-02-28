@@ -287,9 +287,9 @@ $(function () {
         const user = $("#user").val();
         const unidad = $("#unidad").val();
         const estatus = $("#estatus").val();
-        const text = $("#text-parsed-quill").val();
+        const text = $("#text-parsed-quill")[0].textContent;
         const editingId = $("#form-add-event").data("editing-id") || null;
-
+        
         if (new Date(end) < new Date(start)) {
             alert("La fecha de fin no puede ser menor que la fecha de inicio.");
             return;
@@ -312,33 +312,33 @@ $(function () {
             },
         };
 
-        const finishCreate = () => {
-            const newCalendarEvent = calendar.addEvent(objeto);
-            axios_NewEvent(objeto)
-                .then(() => {
-                    calendar.refetchEvents();
-                })
-                .catch(() => {
-                    newCalendarEvent.remove();
-                    alert("No fue posible guardar el evento en servidor.");
-                });
-        };
+        // const finishCreate = () => {
+        //     const newCalendarEvent = calendar.addEvent(objeto);
+        //     axios_NewEvent(objeto)
+        //         .then(() => {
+        //             calendar.refetchEvents();
+        //         })
+        //         .catch(() => {
+        //             newCalendarEvent.remove();
+        //             alert("No fue posible guardar el evento en servidor.");
+        //         });
+        // };
 
-        if (editingId) {
-            const currentEvent = calendar.getEventById(editingId);
-            if (currentEvent) {
-                currentEvent.remove();
-            }
-            axios_DeleteEvent({ id: editingId }).finally(() => {
-                finishCreate();
-            });
-        } else {
-            finishCreate();
-        }
+        // if (editingId) {
+        //     const currentEvent = calendar.getEventById(editingId);
+        //     if (currentEvent) {
+        //         currentEvent.remove();
+        //     }
+        //     axios_DeleteEvent({ id: editingId }).finally(() => {
+        //         finishCreate();
+        //     });
+        // } else {
+        //     finishCreate();
+        // }
 
-        clearForm("form-add-event");
-        $("#form-add-event").removeData("editing-id");
-        $("#modal-add").modal("toggle");
+        // clearForm("form-add-event");
+        // $("#form-add-event").removeData("editing-id");
+        // $("#modal-add").modal("toggle");
     }
 
     function deleteEvent(id) {
