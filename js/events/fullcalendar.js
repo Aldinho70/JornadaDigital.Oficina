@@ -314,9 +314,10 @@ $(function () {
 
         const finishCreate = () => {
             const newCalendarEvent = calendar.addEvent(objeto);
+            
             axios_NewEvent(objeto)
                 .then(() => {
-                    calendar.refetchEvents();
+                    // calendar.refetchEvents();
                 })
                 .catch(() => {
                     newCalendarEvent.remove();
