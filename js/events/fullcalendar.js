@@ -7,15 +7,15 @@ $(function () {
     initQuill();
     $("#btnadd").attr("type", "button");
 
-    // getDataQuery("SELECT * FROM `view_status_events`;").then((data) => {
-    //     updateStatusEvents(data);
-    // });
+    getDataQuery("SELECT * FROM `view_status_events`;").then((data) => {
+        updateStatusEvents(data);
+    });
 
-    // getDataQuery("SELECT * FROM `view_promedio_terminados`;").then((data) => {
-    //     data.forEach((element) => {
-    //         $("#cont-porcent").text(`${Math.round(element.PROMEDIO)}%`);
-    //     });
-    // });
+    getDataQuery("SELECT * FROM `view_promedio_terminados`;").then((data) => {
+        data.mensaje.forEach((element) => {
+            $("#cont-porcent").text(`${Math.round(element.PROMEDIO)}%`);
+        });
+    });
 
     const calendarEl = document.getElementById("calendar");
     const calendar = new FullCalendar.Calendar(calendarEl, buildCalendarConfig());
@@ -541,9 +541,9 @@ function axios_select_red_byId(id) {
         });
 }
 
-const getDataQuery = async (SQL) => {
+const getDataQuery = async ( query ) => {
     return await axios
-        .post("../php/query.php", { SQL: SQL })
+        .post("http://ws4cjdg.com/JDigitalReportsV2/src/api/routes/calendar/getQuery.php", { query: query })
         .then((response) => {
             return response.data;
         })
@@ -602,9 +602,7 @@ function filterByUser(user) {
 }
 
 const updateStatusEvents = (data) => {
-    console.log(data);
-    
-    data.forEach((element) => {
+    data.mensaje.forEach((element) => {
         $(`#cont-${element.Status.replaceAll(" ", "_")}`).text(element.Total);
     });
 };
@@ -613,53 +611,55 @@ const view_status_events_modal = (name_view) => {
     $("#modal-body-events-status").empty();
 
     getDataQuery(`SELECT * FROM view_${name_view};`).then((data) => {
-        if (!data.length) {
+        console.log(data);
+        
+        if ( data.status != 'ok' ) {
             $("#modal-body-events-status").html(`
-          <div class="text-center py-5 text-muted">
-            <i class="bi bi-inbox fs-1 d-block mb-2"></i>
-            <p class="fw-semibold mb-0">No hay reportes en esta categoria</p>
-          </div>
-        `);
+                <div class="text-center py-5 text-muted">
+                    <i class="bi bi-inbox fs-1 d-block mb-2"></i>
+                    <p class="fw-semibold mb-0">No hay reportes en esta categoria</p>
+                </div>
+                `);
             return;
         }
 
-        data.forEach((element) => {
+        data.mensaje.forEach((element) => {
             $("#modal-body-events-status").append(`
-          <div class="card shadow-sm border-0 mb-3 rounded-4 report-card">
-            <div class="card-header bg-gradient d-flex justify-content-between align-items-center rounded-top-4"
-                 style="background: linear-gradient(90deg, #0099ff, #00c6ff);">
-              <div class="d-flex align-items-center gap-2">
-                <div class="avatar bg-white text-dark fw-bold rounded-circle d-flex justify-content-center align-items-center" style="width:35px; height:35px;">
-                  ${element.user.charAt(0).toUpperCase()}
+            <div class="card shadow-sm border-0 mb-3 rounded-4 report-card">
+                <div class="card-header bg-gradient d-flex justify-content-between align-items-center rounded-top-4"
+                    style="background: linear-gradient(90deg, #0099ff, #00c6ff);">
+                <div class="d-flex align-items-center gap-2">
+                    <div class="avatar bg-white text-dark fw-bold rounded-circle d-flex justify-content-center align-items-center" style="width:35px; height:35px;">
+                    ${element.user.charAt(0).toUpperCase()}
+                    </div>
+                    <div>
+                    <span class="fw-semibold text-white">${element.user}</span><br>
+                    <small class="text-light opacity-75">Responsable</small>
+                    </div>
                 </div>
-                <div>
-                  <span class="fw-semibold text-white">${element.user}</span><br>
-                  <small class="text-light opacity-75">Responsable</small>
+                <div class="text-end">
+                    <small class="text-white-50 d-block">Fecha estimada</small>
+                    <span class="badge bg-light text-dark px-3 py-2 shadow-sm">${element.end}</span>
                 </div>
-              </div>
-              <div class="text-end">
-                <small class="text-white-50 d-block">Fecha estimada</small>
-                <span class="badge bg-light text-dark px-3 py-2 shadow-sm">${element.end}</span>
-              </div>
-            </div>
+                </div>
 
-            <div class="card-body bg-secondary">
-              <h5 class="card-title text-white mb-2">${element.title}</h5>
-              <p class="card-text text-secondary mb-3" style="white-space: pre-line;">
-                ${element.text || "<em>Sin descripcion.</em>"}
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <span class="badge rounded-pill text-bg-secondary px-3 py-2">
-                  ${element.type || "General"}
-                </span>
-                <button type="button" class="btn btn-outline-warning btn-sm fw-semibold"
-                        id="${element.id}" onClick="axios_select_red_byId(${element.id});">
-                  Ver detalles <i class="bi bi-arrow-right-circle ms-1"></i>
-                </button>
-              </div>
+                <div class="card-body bg-secondary">
+                <h5 class="card-title text-white mb-2">${element.title}</h5>
+                <p class="card-text text-secondary mb-3" style="white-space: pre-line;">
+                    ${element.text || "<em>Sin descripcion.</em>"}
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="badge rounded-pill text-bg-secondary px-3 py-2">
+                    ${element.type || "General"}
+                    </span>
+                    <button type="button" class="btn btn-outline-warning btn-sm fw-semibold"
+                            id="${element.id}" onClick="axios_select_red_byId(${element.id});">
+                    Ver detalles <i class="bi bi-arrow-right-circle ms-1"></i>
+                    </button>
+                </div>
+                </div>
             </div>
-          </div>
-        `);
+            `);
         });
 
         $("#modal-events-status").modal("show");
