@@ -553,36 +553,115 @@ const getDataQuery = async ( query ) => {
 };
 
 function showEvent(info) {
-    $("#modal-title-view").text(info.type);
+    const isDone = String(info.atendido) === "1" || String(info.atendido).toLowerCase() === "true";
+    const estadoTexto = isDone ? "Finalizado" : "En proceso";
+    const estadoClase = isDone ? "success" : "warning";
+    const estadoIcono = isDone ? "bi-check-circle-fill" : "bi-hourglass-split";
+    const fechaInicio = info.start || "-";
+    const fechaFin = info.end || info.start || "-";
+    const tipo = info.type || "Reporte";
+    const responsable = info.user || "N/A";
+    const unidad = info.unidad || "Sin unidad";
+    const descripcion = info.text || "Sin descripcion";
+
+    $("#modal-title-view").html(`
+        <div class="d-flex align-items-center gap-2">
+            <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-subtle text-primary" style="width: 34px; height: 34px;">
+                <i class="bi bi-calendar2-check fs-6"></i>
+            </span>
+            <div>
+                <div class="small text-muted lh-1">Detalle del evento</div>
+                <span class="fw-bold text-uppercase">${tipo}</span>
+            </div>
+        </div>
+    `);
+
     $("#modal-body-view").html(`
-            <div class="card">
-                <div class="card-header">
-                    <div class="d-flex">
-                        <div class="p-2 flex-grow-1 ">Realizado por <span class="badge text-bg-secondary">${info.user}</span></div>
-                        <div class="p-2">${info.title}</div>
-                        <div class="p-2">${info.atendido == 0
-            ? '<a href="#" class="btn btn-danger">No finalizado</a>'
-            : '<a href="#" class="btn btn-success">Finalizado</a>'
-        }</div>
+        <div class="rounded-4 border border-secondary-subtle shadow-sm overflow-hidden">
+            <div class="p-3 p-md-4 text-white" style="background: linear-gradient(120deg, #0d6efd 0%, #0a58ca 55%, #083b8a 100%);">
+                <div class="d-flex flex-wrap justify-content-between align-items-start gap-3">
+                    <div>
+                        <span class="badge rounded-pill text-bg-light text-primary fw-semibold mb-2">
+                            <i class="bi bi-tag-fill me-1"></i>${tipo}
+                        </span>
+                        <h4 class="mb-1 fw-bold">${info.title || "Sin titulo"}</h4>
+                        <p class="mb-0 opacity-75">
+                            <i class="bi bi-person-badge me-1"></i>Responsable: <strong>${responsable}</strong>
+                        </p>
+                    </div>
+                    <div class="text-md-end">
+                        <span class="badge text-bg-${estadoClase} px-3 py-2 fs-6">
+                            <i class="bi ${estadoIcono} me-1"></i>${estadoTexto}
+                        </span>
+                        <div class="small mt-2 opacity-75">Folio: #${info.id || "-"}</div>
                     </div>
                 </div>
-                <div class="card-body">
-                <h5 class="card-title">Descripcion:</h5>
-                <hr>
-                <div class="bg-light text-dark">
-                    <p class="card-text ">${info.text}</p>
+            </div>
+
+            <div class="p-3 p-md-4 bg-body-tertiary">
+                <div class="row g-3 mb-3">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body">
+                                <small class="text-muted text-uppercase fw-semibold d-block mb-1">Unidad / Cliente</small>
+                                <div class="fw-semibold fs-6">
+                                    <i class="bi bi-building me-1 text-primary"></i>${unidad}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body">
+                                <small class="text-muted text-uppercase fw-semibold d-block mb-1">Inicio</small>
+                                <div class="fw-semibold fs-6">
+                                    <i class="bi bi-calendar-event me-1 text-primary"></i>${fechaInicio}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body">
+                                <small class="text-muted text-uppercase fw-semibold d-block mb-1">Fin estimado</small>
+                                <div class="fw-semibold fs-6">
+                                    <i class="bi bi-calendar2-check me-1 text-primary"></i>${fechaFin}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-body d-flex align-items-center justify-content-between">
+                        <h6 class="mb-0 text-uppercase fw-bold text-secondary">
+                            <i class="bi bi-card-text me-1"></i>Descripcion del reporte
+                        </h6>
+                        <span class="badge text-bg-secondary">Vista rapida</span>
+                    </div>
+                    <div class="card-body bg-light text-dark" style="white-space: pre-line;">
+                        ${descripcion}
+                    </div>
                 </div>
-                <div class="card-footer text-body-secondary">
-                El evento se inicio el ${info.start} y se espera terminar el ${info.end ? info.end : info.start}
+
+                <div class="text-end mt-3">
+                    <small class="text-muted">
+                        <i class="bi bi-clock-history me-1"></i>Actualizado: ${new Date().toLocaleString()}
+                    </small>
                 </div>
             </div>
-            `);
+        </div>
+    `);
+
     $("#modal-footer-view").html(`
-            <button type="button" class="btn btn-danger" onClick="deleteEvent('${info.id}');">Eliminar</button>
-            <button type="button" class="btn btn-primary" onClick="updateEvent('${info.id}');">Modificar</button>
-            `);
+        <button type="button" class="btn btn-outline-danger" onClick="deleteEvent('${info.id}');">
+            <i class="bi bi-trash me-1"></i>Eliminar
+        </button>
+        <button type="button" class="btn btn-outline-primary" onClick="updateEvent('${info.id}');">
+            <i class="bi bi-pencil-square me-1"></i>Modificar
+        </button>
+    `);
+
     $("#modal-view").modal("show");
     imgParser();
 }
@@ -669,4 +748,5 @@ const view_status_events_modal = (name_view) => {
 window.imgParser = imgParser;
 window.filterByUser = filterByUser;
 window.view_status_events_modal = view_status_events_modal;
+
 
